@@ -22,13 +22,23 @@
 </head>
 
 <body>
-    <h1><a href="index.html">Ju Chan's WEB</a></h1>
+    <h1 class=""><a href="index.html">Ju Chan's WEB</a></h1>
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('a').style.color='white';
+    ">
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('a').style.color='black';
+    ">
     <div id="grid">
         <ol>
             <p style="margin:0; font-size: 30px; border-bottom:1px solid gray">List</p>
-            <li><a href="5-1.html" class="saw" id="aciveid"> HTML</a></li>
-            <li><a href="5-2.html" class="saw active">CSS</a></li>
-            <li><a href="5-3.html">JavaScript</a></li>
+            <li><a class="saw" href="5-1.html"> HTML</a></li>
+            <li><a class="saw" href="5-2.html">CSS</a></li>
+            <li><a class="saw" href="5-3.html">JavaScript</a></li>
         </ol>
 
         <!-- <h1><a href="index.html"><font color="red"> WEB</font></a></h1>
@@ -81,7 +91,7 @@
                 billions of people worldwide use to interact with the Internet.[6]
             </p>
 
-            <div id="disqus_thread"></div>
+            <div class = "saw2" id="disqus_thread"></div>
             <script>
                 /**
                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

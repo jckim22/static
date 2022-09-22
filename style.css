@@ -11,7 +11,6 @@ body {
 } */
 
 a {
-    color: black;
     text-decoration: none;
 }
 
@@ -23,13 +22,12 @@ h1 {
     padding: 20px;
 }
 
-/* .saw {
-    color: blue;
+.saw {
+    color: rgb(108, 108, 237);
 }
 
-.active {
-    color: red;
-} */
+.saw2{
+}
 
 #grid ol {
     border-right: 1px solid gray;
