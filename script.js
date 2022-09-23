@@ -1,34 +1,49 @@
 
 
-function setColor(color) {
-    target = document.querySelector('body');
-    All = document.querySelectorAll('.saw');
-    target.style.color = color;
-    document.querySelector('a').style.color = color;
-    for (var i = 0; i < All.length; i++) {
-        All[i].style.color = color;
+var Links = {
+    setColor : function (color) {
+        target = document.querySelector('body');
+        // All = document.querySelectorAll('.saw');
+        target.style.color = color;
+        document.querySelector('a').style.color = color;
+        // for (var i = 0; i < All.length; i++) {
+        //     All[i].style.color = color;
+        // }
+        $('.saw').css('color',color)//이 웹페이제 있는 모든 a를 jquery가 통제한다. 그리고 그 컬러 값을 이 함수의 컬러
+        //값으로 변경한다
+        // $('body').css('color',color);
     }
 }
-function bodySet(color,time) {
-    target.style.backgroundColor = color;
-    document.querySelector('#night-day').value = time;
+var Body = {
+    SetTime: function (time) {
+        document.querySelector('#night-day').value = time;
+        // $('#night-day').value=time;
+    },
+    SetBackgroundColor: (color) => {
+        // target.style.backgroundColor = color;
+        $('body').css('backgroundColor',color);
+        
+    }
 }
 function nightHandle() {
 
     // saw라는 클래스가 있는 태그들의 배열을 All변수에 담아줌
 
     if (document.querySelector('#night-day').value == 'night') {
-        setColor('white');
-        bodySet('black','day');
+        Links.setColor('white');
+        Body.SetBackgroundColor('black');
+        Body.SetTime('day');
 
     }
     else {
-        setColor('black');
-        bodySet('white','night');
+        Links.setColor('black');
+        Body.SetBackgroundColor('white');
+        Body.SetTime('night');
 
     }
 
 }
+
 function List() {
     var lan = ['HTML', 'CSS', 'JavaScript'];
     var cntArr = ["5-1.html", "5-2.html", "5-3.html"];
@@ -38,6 +53,7 @@ function List() {
         cnt++;
     }
 }
+
 function twak() {
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
@@ -49,6 +65,7 @@ function twak() {
         s0.parentNode.insertBefore(s1, s0);
     })();
 }
+
 function discuss() {
     (function () { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
