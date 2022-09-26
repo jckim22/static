@@ -46,7 +46,7 @@ function nightHandle() {
 
 function List() {
     var lan = ['HTML', 'CSS', 'JavaScript','PHP'];
-    var cntArr = ["index.php?id=HTML", "index.php?id=CSS", "index.php?id=JavaScript","index.php?id=PHP"];
+    var cntArr = ["5-1.html", "5-2.html", "5-3.html","5-4.html"];
     var cnt = 0;
     for (var i = 0; i < lan.length; i++) {
         document.write('<li"><a href=' + cntArr[cnt] + '><div class="saw active">' + lan[i] + '</div></a></li>');
